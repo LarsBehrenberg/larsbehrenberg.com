@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lars Behrenberg - Front End Webdeveloper</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                "Fira Sans", "Droid Sans", "Helvetica Neue",
+                sans-serif;
+        }
+
+        #page {
+            height: inherit;
+            text-align: center;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 2px;
+            padding: 10px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: perspective(1px) translate(-50%, -50%);
+            /*margin: 0 auto;*/
+            max-width: 100%;
+            width: 310px;
+            border: 0.5px solid rgba(0,0,0,0.25);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 2.7em;
+        }
+
+        a {
+            color: #128bde;
+            text-decoration: none;
+            border-bottom: 1px solid #EEE;
+            transition: all 300ms ease;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #128bde;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .no-border,
+        a.no-border {
+            border-width: 0px;
+        }
+
+        .gray {
+            color: #555;
+        }
+
+        .social-icons-container {
+            margin-top: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .icon {
+            border-radius: 2px;
+            height: 25px;
+            width: 25px;
+        }
+
+        .icon-sm {
+            height: 20px;
+            width: 20px;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fdfdfd;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-social-icons {
+            width: 350px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .social-icon {
+            color: #fff;
+        }
+
+        ul.social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons li {
+            vertical-align: top;
+            display: inline;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .fa-facebook {
+            padding: 10px 14px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-facebook:hover {
+            background-color: #3d5b99;
+        }
+
+        .fa-twitter {
+            padding: 10px 12px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-twitter:hover {
+            background-color: #00aced;
+        }
+
+        .fa-rss {
+            padding: 10px 14px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-rss:hover {
+            background-color: #eb8231;
+        }
+
+        /* .fa-youtube {
+            padding: 10px 14px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-youtube:hover {
+            background-color: #e64a41;
+        } */
+
+        .fa-linkedin {
+            padding: 10px 14px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-linkedin:hover {
+            background-color: #0073a4;
+        }
+
+        .fa-github {
+            padding: 10px 14px;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+            background-color: #322f30;
+        }
+
+        .fa-github:hover {
+            background-color: #5a32a3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div id="page">
+        <div id="container">
+            <h1>Lars Behrenberg</h1>
+
+            <div class="gray">
+                <p>
+                    <b>Coder, &amp; Maker</b>
+                </p>
+
+                <p>
+                    Currently I work as a Front End Webdeveloper Freelancer in <a
+                        href="https://www.google.com/maps/place/Kyoto,+Japan/" target="_blank">Kyoto, Japan</a>.
+                    I enjoy building websites and applications using HTML, CSS, React, NodeJS, ExpressJS and MongoDB.
+                </p>
+
+                <p>
+                    In my free time, I enjoy hiking, studying Japanese, and work on my <a
+                        href="https://github.com/larsbehrenberg">side projects</a>.
+                </p>
+
+                <p>
+                    Check out <a href="http://blog.larsbehrenberg.com/">my blog</a> or <a
+                        href="mailto:me@larsbehrenberg.com">email me</a>.
+                </p>
+            </div>
+
+            <div class="social-icons-container">
+                <ul class="social-icons">
+                    <!-- <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li> -->
+                    <!-- <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li> -->
+                    <!-- <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li> -->
+                    <!-- <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li> -->
+                    <li><a href="https://www.linkedin.com/in/lars-behrenberg/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/larsbehrenberg" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="assets/particles.js-master/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#000000"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#000000",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+
+</html>
