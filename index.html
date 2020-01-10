@@ -6,261 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lars Behrenberg - Webdeveloper</title>
-    <style>
-        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont,
-                "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-                "Fira Sans", "Droid Sans", "Helvetica Neue",
-                sans-serif;
-        }
-
-        #page {
-            height: inherit;
-            text-align: center;
-        }
-
-        #background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        #container {
-            background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 2px;
-            padding: 10px;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: perspective(1px) translate(-50%, -50%);
-            /*margin: 0 auto;*/
-            max-width: 100%;
-            width: 310px;
-            border: 0.5px solid rgba(0,0,0,0.25);
-            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        }
-
-        h1,
-        h2 {
-            margin: 0;
-            font-weight: 300;
-        }
-
-        h1 {
-            font-size: 2.7em;
-        }
-
-        a {
-            color: #128bde;
-            text-decoration: none;
-            border-bottom: 1px solid #EEE;
-            transition: all 300ms ease;
-        }
-
-        a:hover {
-            border-bottom: 1px solid #128bde;
-        }
-
-        p {
-            font-size: 14px;
-            margin-top: 0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .no-border,
-        a.no-border {
-            border-width: 0px;
-        }
-
-        .gray {
-            color: #555;
-        }
-
-        .social-icons-container {
-            margin-top: 1.5em;
-            margin-bottom: 1em;
-        }
-
-        .icon {
-            border-radius: 2px;
-            height: 25px;
-            width: 25px;
-        }
-
-        .icon-sm {
-            height: 20px;
-            width: 20px;
-        }
-
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #fdfdfd;
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        .footer-social-icons {
-            width: 350px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .social-icon {
-            color: #fff;
-        }
-
-        ul.social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons li {
-            vertical-align: top;
-            display: inline;
-        }
-
-        .social-icons a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .fa-facebook {
-            padding: 10px 14px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-facebook:hover {
-            background-color: #3d5b99;
-        }
-
-        .fa-twitter {
-            padding: 10px 12px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-twitter:hover {
-            background-color: #00aced;
-        }
-
-        .fa-rss {
-            padding: 10px 14px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-rss:hover {
-            background-color: #eb8231;
-        }
-
-        /* .fa-youtube {
-            padding: 10px 14px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-youtube:hover {
-            background-color: #e64a41;
-        } */
-
-        .fa-linkedin {
-            padding: 10px 14px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-linkedin:hover {
-            background-color: #0073a4;
-        }
-
-        .fa-github {
-            padding: 10px 14px;
-            -o-transition: .5s;
-            -ms-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
-            transition: .5s;
-            background-color: #322f30;
-        }
-
-        .fa-github:hover {
-            background-color: #5a32a3;
-        }
-    </style>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="particles-js"></div>
 
-    <div id="page">
-        <div id="container">
+    <div id="particles-js"></div>
+    <div class="icon-bar">
+        <a href="https://www.twitter.com/codetraveling/" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/lars-behrenberg/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.github.com/larsbehrenberg/" class="github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.xing.com/profile/Lars_Behrenberg/" class="xing" target="_blank"><i class="fa fa-xing"></i></a>
+    </div>
+
+    <nav id="dot-nav"></nav>
+
+    <section id="intro" class="intro-container">
+        <div class="intro-box wow fadeInUp">
             <h1>Lars Behrenberg</h1>
 
             <div class="gray">
                 <p>
-                    <b>Front End Developer</b>
+                    <b>Web Developer</b>
                 </p>
 
                 <p>
-                    Currently working as a Freelancer in <a
-                        href="https://www.google.com/maps/place/Kyoto,+Japan/" target="_blank">Kyoto, Japan</a>.
+                    Currently working as a Freelancer in <a href="https://www.google.com/maps/place/Kyoto,+Japan/"
+                        target="_blank">Kyoto, Japan</a>.
                     I build websites and applications using HTML, CSS, React, NodeJS, ExpressJS and MongoDB.
                 </p>
 
                 <p>
-                    In my free time, I like to go on hikes, study Japanese, and work on my <a
-                        href="https://github.com/larsbehrenberg" target="_blank">side projects</a>.
+                    In my free time, I like to go on hikes, study Japanese, and work on my <a href="#projects">side
+                        projects</a>.
                 </p>
 
                 <p>
@@ -275,21 +55,59 @@
                     <!-- <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li> -->
                     <!-- <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li> -->
                     <!-- <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li> -->
-                    <li><a href="https://www.linkedin.com/in/lars-behrenberg/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/larsbehrenberg" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/lars-behrenberg/" target="_blank" class="social-icon"> <i
+                                class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/larsbehrenberg" target="_blank" class="social-icon"> <i
+                                class="fa fa-github"></i></a></li>
                 </ul>
             </div>
         </div>
+    </section>
+
+    <h1 style="margin-left: 10vh; text-decoration: underline;">Projects</h1>
+
+    <section id="projects" class="projects-container ">
+
+        <div class="single-project wow fadeInUp">
+            <img src="tfbs-website.png" alt="city skyline" class="project-img" href="google.com">
+            <div class="project-description">
+                <h1>t.f.b.s - Telgte</h1>
+                <p>A project for a german company specialized in company consulting and psychology. Built with Wordpress
+                    and php.</p>
+                <a href="https://tfbs.de" title="tfbs website" target="_blank"><button>View Project</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="projects-container">
+        <div class="single-project wow fadeInUp">
+            <div class="project-description">
+                <h1>Project name</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.</p>
+                <button>Demo</button><button>View Code</button>
+            </div>
+            <img src="project.jpg" alt="city skyline" class="project-img">
+        </div>
+    </section> -->
+
+    <div class="footer">
+        <p>&copy; 2020 | Lars Behrenberg </p>
     </div>
+    <div class='scrolltop'>
+        <a href="#"><div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div></a>
+    </div>
+
     <script src="particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
             "particles": {
                 "number": {
-                    "value": 80,
+                    "value": 70,
                     "density": {
                         "enable": true,
-                        "value_area": 800
+                        "value_area": 600
                     }
                 },
                 "color": {
@@ -352,47 +170,343 @@
                     }
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
             "retina_detect": true
         });
+    </script>
+    <script>
+        const dotNav = (e, t) => {
+            (e => {
+                let t = document.getElementsByTagName(e),
+                    n = window.innerHeight;
+                const o = () => {
+                    for (let e = 0; e < t.length; e++) t[e].getBoundingClientRect().top < n ? t[e]
+                        .classList
+                        .add("in-viewport") : t[e].classList.remove("in-viewport")
+                };
+                o(), window.addEventListener("scroll", o)
+            })("section");
+            const n = document.getElementsByTagName(e),
+                o = document.getElementById("dot-nav");
+            let s, i = document.getElementsByClassName("in-viewport");
+            for (let e = 0; e < n.length; e++) n[e].classList.add("section-" + e);
+            (() => {
+                for (let e = 0; e < n.length; e++) {
+                    const t = document.createElement("a");
+                    t.id = "dot-" + e, t.classList.add("dots"), t.href = "#", t.setAttribute("data-sec", e),
+                        o
+                        .appendChild(t)
+                }
+            })();
+            let a = document.getElementById("dot-nav").clientHeight / 2;
+            document.getElementById("dot-nav").style.top = "calc(50% - " + a + "px)";
+            const c = () => {
+                i = document.getElementsByClassName("in-viewport"), s = document.getElementsByClassName(
+                        "dots"),
+                    visNum = i.length;
+                let e = visNum - 1;
+                for (let e = 0; e < n.length; e++) s[e].classList.remove("active");
+                document.getElementById("dot-" + e).classList.add("active")
+            };
+            c(), window.onscroll = function () {
+                c()
+            };
+            const d = e => {
+                let n = e.currentTarget.dataset.sec;
+                ! function (e, t = 200, n = "linear", o) {
+                    const s = {
+                            linear: e => e,
+                            easeInQuad: e => e * e,
+                            easeOutQuad: e => e * (2 - e),
+                            easeInOutQuad: e => e < .5 ? 2 * e * e : (4 - 2 * e) * e - 1,
+                            easeInCubic: e => e * e * e,
+                            easeOutCubic: e => --e * e * e + 1,
+                            easeInOutCubic: e => e < .5 ? 4 * e * e * e : (e - 1) * (2 * e - 2) * (2 * e -
+                                    2) +
+                                1,
+                            easeInQuart: e => e * e * e * e,
+                            easeOutQuart: e => 1 - --e * e * e * e,
+                            easeInOutQuart: e => e < .5 ? 8 * e * e * e * e : 1 - 8 * --e * e * e * e,
+                            easeInQuint: e => e * e * e * e * e,
+                            easeOutQuint: e => 1 + --e * e * e * e * e,
+                            easeInOutQuint: e => e < .5 ? 16 * e * e * e * e * e : 1 + 16 * --e * e * e *
+                                e * e
+                        },
+                        i = window.pageYOffset,
+                        a = "now" in window.performance ? performance.now() : (new Date).getTime(),
+                        c = Math.max(document.body.scrollHeight, document.body.offsetHeight, document
+                            .documentElement.clientHeight, document.documentElement.scrollHeight, document
+                            .documentElement.offsetHeight),
+                        d = window.innerHeight || document.documentElement.clientHeight || document
+                        .getElementsByTagName("body")[0].clientHeight,
+                        l = "number" == typeof e ? e : e.offsetTop,
+                        m = Math.round(c - l < d ? c - d : l);
+                    if ("requestAnimationFrame" in window == 0) return window.scroll(0, m), void(o && o());
+                    ! function e() {
+                        const c = "now" in window.performance ? performance.now() : (new Date).getTime(),
+                            d = Math.min(1, (c - a) / t),
+                            l = s[n](d);
+                        window.scroll(0, Math.ceil(l * (m - i) + i)), window.pageYOffset !== m ?
+                            requestAnimationFrame(e) : o && o()
+                    }()
+                }(document.querySelector(".section-" + n), "1000", t), e.preventDefault()
+            };
+            s = document.getElementsByClassName("dots");
+            for (let e = 0; e < s.length; e++) s[e].addEventListener("click", d)
+        };
+        dotNav("section", "easeInOutCubic");
+    </script>
+
+    <script>
+        (function () {
+            var a, b, c, d, e, f = function (a, b) {
+                    return function () {
+                        return a.apply(b, arguments)
+                    }
+                },
+                g = [].indexOf || function (a) {
+                    for (var b = 0, c = this.length; c > b; b++)
+                        if (b in this && this[b] === a) return b;
+                    return -1
+                };
+            b = function () {
+                function a() {}
+                return a.prototype.extend = function (a, b) {
+                    var c, d;
+                    for (c in b) d = b[c], null == a[c] && (a[c] = d);
+                    return a
+                }, a.prototype.isMobile = function (a) {
+                    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)
+                }, a.prototype.createEvent = function (a, b, c, d) {
+                    var e;
+                    return null == b && (b = !1), null == c && (c = !1), null == d && (d = null),
+                        null != document.createEvent ? (e = document.createEvent("CustomEvent"), e
+                            .initCustomEvent(a, b, c, d)) : null != document.createEventObject ? (e =
+                            document.createEventObject(), e.eventType = a) : e.eventName = a, e
+                }, a.prototype.emitEvent = function (a, b) {
+                    return null != a.dispatchEvent ? a.dispatchEvent(b) : b in (null != a) ? a[b]() :
+                        "on" + b in (null != a) ? a["on" + b]() : void 0
+                }, a.prototype.addEvent = function (a, b, c) {
+                    return null != a.addEventListener ? a.addEventListener(b, c, !1) : null != a
+                        .attachEvent ? a.attachEvent("on" + b, c) : a[b] = c
+                }, a.prototype.removeEvent = function (a, b, c) {
+                    return null != a.removeEventListener ? a.removeEventListener(b, c, !1) : null != a
+                        .detachEvent ? a.detachEvent("on" + b, c) : delete a[b]
+                }, a.prototype.innerHeight = function () {
+                    return "innerHeight" in window ? window.innerHeight : document.documentElement
+                        .clientHeight
+                }, a
+            }(), c = this.WeakMap || this.MozWeakMap || (c = function () {
+                function a() {
+                    this.keys = [], this.values = []
+                }
+                return a.prototype.get = function (a) {
+                    var b, c, d, e, f;
+                    for (f = this.keys, b = d = 0, e = f.length; e > d; b = ++d)
+                        if (c = f[b], c === a) return this.values[b]
+                }, a.prototype.set = function (a, b) {
+                    var c, d, e, f, g;
+                    for (g = this.keys, c = e = 0, f = g.length; f > e; c = ++e)
+                        if (d = g[c], d === a) return void(this.values[c] = b);
+                    return this.keys.push(a), this.values.push(b)
+                }, a
+            }()), a = this.MutationObserver || this.WebkitMutationObserver || this.MozMutationObserver || (
+                a = function () {
+                    function a() {
+                        "undefined" != typeof console && null !== console && console.warn(
+                                "MutationObserver is not supported by your browser."), "undefined" !=
+                            typeof console && null !== console && console.warn(
+                                "WOW.js cannot detect dom mutations, please call .sync() after loading new content."
+                            )
+                    }
+                    return a.notSupported = !0, a.prototype.observe = function () {}, a
+                }()), d = this.getComputedStyle || function (a, b) {
+                return this.getPropertyValue = function (b) {
+                    var c;
+                    return "float" === b && (b = "styleFloat"), e.test(b) && b.replace(e, function (a,
+                        b) {
+                        return b.toUpperCase()
+                    }), (null != (c = a.currentStyle) ? c[b] : void 0) || null
+                }, this
+            }, e = /(\-([a-z]){1})/g, this.WOW = function () {
+                function e(a) {
+                    null == a && (a = {}), this.scrollCallback = f(this.scrollCallback, this), this
+                        .scrollHandler = f(this.scrollHandler, this), this.resetAnimation = f(this
+                            .resetAnimation, this), this.start = f(this.start, this), this.scrolled = !0,
+                        this.config = this.util().extend(a, this.defaults), null != a.scrollContainer && (
+                            this.config.scrollContainer = document.querySelector(a.scrollContainer)), this
+                        .animationNameCache = new c, this.wowEvent = this.util().createEvent(this.config
+                            .boxClass)
+                }
+                return e.prototype.defaults = {
+                    boxClass: "wow",
+                    animateClass: "animated",
+                    offset: 0,
+                    mobile: !0,
+                    live: !0,
+                    callback: null,
+                    scrollContainer: null
+                }, e.prototype.init = function () {
+                    var a;
+                    return this.element = window.document.documentElement, "interactive" === (a =
+                            document.readyState) || "complete" === a ? this.start() : this.util()
+                        .addEvent(document, "DOMContentLoaded", this.start), this.finished = []
+                }, e.prototype.start = function () {
+                    var b, c, d, e;
+                    if (this.stopped = !1, this.boxes = function () {
+                            var a, c, d, e;
+                            for (d = this.element.querySelectorAll("." + this.config.boxClass), e = [],
+                                a = 0, c = d.length; c > a; a++) b = d[a], e.push(b);
+                            return e
+                        }.call(this), this.all = function () {
+                            var a, c, d, e;
+                            for (d = this.boxes, e = [], a = 0, c = d.length; c > a; a++) b = d[a], e
+                                .push(b);
+                            return e
+                        }.call(this), this.boxes.length)
+                        if (this.disabled()) this.resetStyle();
+                        else
+                            for (e = this.boxes, c = 0, d = e.length; d > c; c++) b = e[c], this
+                                .applyStyle(b, !0);
+                    return this.disabled() || (this.util().addEvent(this.config.scrollContainer ||
+                        window, "scroll", this.scrollHandler), this.util().addEvent(window,
+                        "resize", this.scrollHandler), this.interval = setInterval(this
+                        .scrollCallback, 50)), this.config.live ? new a(function (a) {
+                        return function (b) {
+                            var c, d, e, f, g;
+                            for (g = [], c = 0, d = b.length; d > c; c++) f = b[c], g.push(
+                                function () {
+                                    var a, b, c, d;
+                                    for (c = f.addedNodes || [], d = [], a = 0, b = c
+                                        .length; b > a; a++) e = c[a], d.push(this
+                                        .doSync(e));
+                                    return d
+                                }.call(a));
+                            return g
+                        }
+                    }(this)).observe(document.body, {
+                        childList: !0,
+                        subtree: !0
+                    }) : void 0
+                }, e.prototype.stop = function () {
+                    return this.stopped = !0, this.util().removeEvent(this.config.scrollContainer ||
+                        window, "scroll", this.scrollHandler), this.util().removeEvent(window,
+                        "resize", this.scrollHandler), null != this.interval ? clearInterval(this
+                        .interval) : void 0
+                }, e.prototype.sync = function (b) {
+                    return a.notSupported ? this.doSync(this.element) : void 0
+                }, e.prototype.doSync = function (a) {
+                    var b, c, d, e, f;
+                    if (null == a && (a = this.element), 1 === a.nodeType) {
+                        for (a = a.parentNode || a, e = a.querySelectorAll("." + this.config.boxClass),
+                            f = [], c = 0, d = e.length; d > c; c++) b = e[c], g.call(this.all, b) < 0 ?
+                            (this.boxes.push(b), this.all.push(b), this.stopped || this.disabled() ?
+                                this.resetStyle() : this.applyStyle(b, !0), f.push(this.scrolled = !0)
+                            ) : f.push(void 0);
+                        return f
+                    }
+                }, e.prototype.show = function (a) {
+                    return this.applyStyle(a), a.className = a.className + " " + this.config
+                        .animateClass, null != this.config.callback && this.config.callback(a), this
+                        .util().emitEvent(a, this.wowEvent), this.util().addEvent(a, "animationend",
+                            this.resetAnimation), this.util().addEvent(a, "oanimationend", this
+                            .resetAnimation), this.util().addEvent(a, "webkitAnimationEnd", this
+                            .resetAnimation), this.util().addEvent(a, "MSAnimationEnd", this
+                            .resetAnimation), a
+                }, e.prototype.applyStyle = function (a, b) {
+                    var c, d, e;
+                    return d = a.getAttribute("data-wow-duration"), c = a.getAttribute(
+                        "data-wow-delay"), e = a.getAttribute("data-wow-iteration"), this.animate(
+                        function (f) {
+                            return function () {
+                                return f.customStyle(a, b, d, c, e)
+                            }
+                        }(this))
+                }, e.prototype.animate = function () {
+                    return "requestAnimationFrame" in window ? function (a) {
+                        return window.requestAnimationFrame(a)
+                    } : function (a) {
+                        return a()
+                    }
+                }(), e.prototype.resetStyle = function () {
+                    var a, b, c, d, e;
+                    for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++) a = d[b], e.push(a
+                        .style.visibility = "visible");
+                    return e
+                }, e.prototype.resetAnimation = function (a) {
+                    var b;
+                    return a.type.toLowerCase().indexOf("animationend") >= 0 ? (b = a.target || a
+                        .srcElement, b.className = b.className.replace(this.config.animateClass, "")
+                        .trim()) : void 0
+                }, e.prototype.customStyle = function (a, b, c, d, e) {
+                    return b && this.cacheAnimationName(a), a.style.visibility = b ? "hidden" :
+                        "visible", c && this.vendorSet(a.style, {
+                            animationDuration: c
+                        }), d && this.vendorSet(a.style, {
+                            animationDelay: d
+                        }), e && this.vendorSet(a.style, {
+                            animationIterationCount: e
+                        }), this.vendorSet(a.style, {
+                            animationName: b ? "none" : this.cachedAnimationName(a)
+                        }), a
+                }, e.prototype.vendors = ["moz", "webkit"], e.prototype.vendorSet = function (a, b) {
+                    var c, d, e, f;
+                    d = [];
+                    for (c in b) e = b[c], a["" + c] = e, d.push(function () {
+                        var b, d, g, h;
+                        for (g = this.vendors, h = [], b = 0, d = g.length; d > b; b++) f = g[
+                            b], h.push(a["" + f + c.charAt(0).toUpperCase() + c.substr(1)] =
+                            e);
+                        return h
+                    }.call(this));
+                    return d
+                }, e.prototype.vendorCSS = function (a, b) {
+                    var c, e, f, g, h, i;
+                    for (h = d(a), g = h.getPropertyCSSValue(b), f = this.vendors, c = 0, e = f
+                        .length; e > c; c++) i = f[c], g = g || h.getPropertyCSSValue("-" + i + "-" +
+                        b);
+                    return g
+                }, e.prototype.animationName = function (a) {
+                    var b;
+                    try {
+                        b = this.vendorCSS(a, "animation-name").cssText
+                    } catch (c) {
+                        b = d(a).getPropertyValue("animation-name")
+                    }
+                    return "none" === b ? "" : b
+                }, e.prototype.cacheAnimationName = function (a) {
+                    return this.animationNameCache.set(a, this.animationName(a))
+                }, e.prototype.cachedAnimationName = function (a) {
+                    return this.animationNameCache.get(a)
+                }, e.prototype.scrollHandler = function () {
+                    return this.scrolled = !0
+                }, e.prototype.scrollCallback = function () {
+                    var a;
+                    return !this.scrolled || (this.scrolled = !1, this.boxes = function () {
+                        var b, c, d, e;
+                        for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++) a = d[b],
+                            a && (this.isVisible(a) ? this.show(a) : e.push(a));
+                        return e
+                    }.call(this), this.boxes.length || this.config.live) ? void 0 : this.stop()
+                }, e.prototype.offsetTop = function (a) {
+                    for (var b; void 0 === a.offsetTop;) a = a.parentNode;
+                    for (b = a.offsetTop; a = a.offsetParent;) b += a.offsetTop;
+                    return b
+                }, e.prototype.isVisible = function (a) {
+                    var b, c, d, e, f;
+                    return c = a.getAttribute("data-wow-offset") || this.config.offset, f = this.config
+                        .scrollContainer && this.config.scrollContainer.scrollTop || window.pageYOffset,
+                        e = f + Math.min(this.element.clientHeight, this.util().innerHeight()) - c, d =
+                        this.offsetTop(a), b = d + a.clientHeight, e >= d && b >= f
+                }, e.prototype.util = function () {
+                    return null != this._util ? this._util : this._util = new b
+                }, e.prototype.disabled = function () {
+                    return !this.config.mobile && this.util().isMobile(navigator.userAgent)
+                }, e
+            }()
+        }).call(this);
+    </script>
+    <script>
+        new WOW().init();
     </script>
 </body>
 
