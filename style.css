@@ -47,6 +47,15 @@ nav#dot-nav a.active {
     z-index: 99;
 }
 
+@media screen and (max-width: 600px){
+    .icon-bar{
+        display: none !important;
+    }
+
+    .mouse-icon {
+        display: none !important;
+    }
+}
 /* Style the icon bar links */
 .icon-bar a {
     display: block;
@@ -221,6 +230,7 @@ nav#dot-nav a.active {
 
 .project-img {
     width: 80%;
+    height: 20%;
     margin: 0 auto;
     order: 1;
 }
@@ -347,6 +357,7 @@ h2 {
 h1 {
     font-size: 2.7em;
 }
+
 
 .intro-box a {
     color: #128bde;
@@ -547,10 +558,10 @@ ul {
     -o-transition: 0.5s;
 }
 
-.scrolltop a:visited {
+.scrolltop a:visited, .scrolltop a {
     text-decoration: none;
     color: black;
-}
+} 
 
 .footer {
     width: 100%;
